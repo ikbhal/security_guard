@@ -47,21 +47,58 @@ function handleSubmit() {
 
 
 	<hr/>
+	
+	<div class="">
+		<h3>Add SG</h3>
+		<form
+			class = "bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"	
+			on:submit|preventDefault={handleSubmit}>
 
-	<h3>Add SG</h3>
-	<form on:submit|preventDefault={handleSubmit}>
-		Name: <input type="text" bind:value={sg.name}/><br/>
-		State: <input type="text" bind:value={sg.state}/><br/>
-		Education: <input type="text" bind:value={sg.education}/><br/>
-		Working at: <input type="text" bind:value={sg.workingAt}/><br/>
-		<button type="submit">Add</button>
-	</form>
+			<div class="mb-4">
+  				<label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+        		Name
+      			</label>
+      			<input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+				   id="name" type="text" placeholder="Name" 
+				   bind:value={sg.name}>
+    		</div>
+
+			<div class="mb-4">
+  				<label class="block text-gray-700 text-sm font-bold mb-2" for="state">
+        		State
+      			</label>
+      			<input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+				   id="state" type="text" placeholder="State" 
+				   bind:value={sg.state}>
+    		</div>
+			
+			<div class="mb-4">
+  				<label class="block text-gray-700 text-sm font-bold mb-2" for="education">
+				Education
+      			</label>
+      			<input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+				   id="education" type="text" placeholder="Education" 
+				   bind:value={sg.education}>
+    		</div>
+
+			<div class="mb-4">
+  				<label class="block text-gray-700 text-sm font-bold mb-2" for="workingAt">
+				Working At
+      			</label>
+      			<input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+				   id="workingAt" type="text" placeholder="Working At" 
+				   bind:value={sg.workgingAt}>
+    		</div>
+			<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+				type="submit">Add</button>
+		</form>
+	</div>
 
 	<hr/>
 	<h3>Security Guard List</h3>
 	<div class="security_guard_list">
 		{#each $sgList as sgm}
-		<div class="security_guard">
+		<div class="rounded overflow-hidden shadow-lg">
 			<div class="name">{sgm.name}</div>
 			<div class="state">{sgm.state}</div>
 			<div class="education">{sgm.education}</div>
@@ -83,8 +120,8 @@ main {
 .security_guard_list{
 	border: 1px solid grey;
 }
-.security_guard {
+/* .security_guard {
 	border: 1px solid grey;
 	border-radius: 6px;
-}
+} */
 </style>
