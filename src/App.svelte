@@ -1,4 +1,26 @@
 <script>
+class SecurityGuard {
+	// constructor(name){
+	// 	this.name = name;
+	// }
+	// constructor(workingAt){
+	// 	this.workingAt = workingAt;
+	// }
+	// constructor(state){
+	// 	this.state = state;
+	// }
+	// constructor(name, state){
+	// 	this.name = name;
+	// 	this.state = state;
+	// }
+	constructor(name, state, mobile, education, workingAt){
+		this.name= name;
+		this.state = state;
+		this.mobile = mobile;
+		this.education = education;
+		this.workingAt = workingAt;
+	}
+}
 </script>
 
 <main>
