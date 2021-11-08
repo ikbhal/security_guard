@@ -202,7 +202,10 @@ select { /* 1 */
 Correct the inability to style clickable types in iOS and Safari.
 */
 
-button {
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
   -webkit-appearance: button;
 }
 
@@ -599,6 +602,10 @@ video {
     -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
             animation-timing-function: cubic-bezier(0,0,0.2,1);
   }
+}
+
+.border {
+  border-width: 1px;
 }
 
 *, ::before, ::after {
